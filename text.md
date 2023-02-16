@@ -52,3 +52,6 @@ npm install dotenv-webpack -D
 npm install clean-webpack-plugin -D 
 ··en package.json agregar··
 "build": "webpack --mode production --config webpack.config.js",
+
+## netlify Web para deploy
+https://app.netlify.com/sites/endearing-platypus-aac615/overview
