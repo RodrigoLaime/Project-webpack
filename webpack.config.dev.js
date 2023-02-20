@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const BundleAnalizerPlugin = require('webpack-bundle-analyzer')
 
 module.exports = {
   //punto de entrada
@@ -15,7 +16,6 @@ module.exports = {
     assetModuleFilename: 'assts/images/[hash][ext][query]'
   },
   mode: 'development',
-  watch: true,
   resolve: {
     //extension a usar
     extensions: [".js"],
@@ -86,6 +86,13 @@ module.exports = {
       ]
     }),
     new Dotenv(),
+    new BundleAnalizerPlugin(),
   ],
- 
+  devServer: {
+    static: path.join(__dirname, 'dist'),
+    compress: true,
+    historyApiFallback: true,
+    port: 8080,
+    open: true,
+  },
 };

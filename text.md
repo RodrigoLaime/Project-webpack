@@ -55,3 +55,12 @@ npm install clean-webpack-plugin -D
 
 ## netlify Web para deploy
 https://app.netlify.com/sites/endearing-platypus-aac615/overview
+
+## 
+npm install webpack-bundle-analyzer -D
+
+## Para guardar informacion desde la terminal
+npx webpack --profile --json > stats.json
+
+## para ver el recurso en una interfas grafica
+npx webpack-bundle-analyzer stats.json
