@@ -64,3 +64,11 @@ npx webpack --profile --json > stats.json
 
 ## para ver el recurso en una interfas grafica
 npx webpack-bundle-analyzer stats.json
+
+
+··
+npm run dev //modo desarrollo
+npm run start // modo produccion
+
+## url del deploy
+https://endearing-platypus-aac615.netlify.app
